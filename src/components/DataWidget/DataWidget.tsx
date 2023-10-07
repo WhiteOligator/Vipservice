@@ -42,12 +42,12 @@ const value = {
 
 const Validationscheme = Yup.object({
   fromCity: Yup.string()
-    .max(15, 'Необходимо выбрать город')
+    .max(50, 'Необходимо выбрать город')
     .required('Необходимо выбрать город'),
   toCity: Yup.string()
-    .max(20, 'Необходимо выбрать город')
+    .max(50, 'Необходимо выбрать город')
     .required('Необходимо выбрать город'),
-  fromDate: Yup.string().required('Введите дату'),
+  fromDate: Yup.date().required('Введите корректную дату'),
 })
 
 export const DataWidget = () => {
