@@ -1,27 +1,27 @@
+# Тестовое задание Випсервис
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ссылка на сайт Vercel: 
 
-Currently, two official plugins are available:
+Данный проект создан с целью выполнения тестового задания компании Випсервис. 
+Проект имеет название "Vipservice" (Випсервис). 
+В "Vipservice" вы можете покупать авиабилеты.
+Для выбора маршрута необходимо перейти на страницу маршрута '/avia'.
+Поля выбора Откуда* Куда* Туда* являются обязательными и на них навешана валидация Yup с использование Formik, поле Обратно - необязательное.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+При вводе валидных данных клиент переходит на страницу информации о маршруте 'avia/info'
+При заполнении только 3 обязательных полей, клиенту предостовляется информация перелёта в одну сторону.
+При заполнении всех полей формы, клиенту предостовляется информация о перелёте в обе стороны.
 
-## Expanding the ESLint configuration
+В данном проекте применяется "React18+", в качестве управления состоянием используется Redux Toolkit. 
+Процесс роутинга осуществлё с помощью библиотеки "react-router-dom". 
+Код написан на типизированом языке "TypeScript". 
+В качестве стилей используется подход CSS in JS, используется библиотека Material UI.
+Сборка осуществлена с использованием Vite.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Для скачивания проекта необходимо открыть ветку main скопировать протокол HTTPS https://github.com/WhiteOligator/Vipservice.git. 
+После этого в терминале IDE необходимо ввести команду git clone https://github.com/WhiteOligator/Vipservice.git. 
+Необходимо установить библиотеки командой npm install. 
+Для запуска проекта введите npm run dev. 
+Для деплоя проекта введите команду npm run build.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
